@@ -36,12 +36,12 @@ namespace Program
         public int UzemanyagSzint { get => uzemanyagSzint; set => uzemanyagSzint = Math.Clamp(value, 0, 100); }
         public bool SzervizSzukseges { get => kilometerOra >= 200000; }
 
-        public void InformaciotAd()
+        public virtual void InformaciotAd()
         {
             Console.WriteLine($"{rendszam} - {kor} éves jármű, {kilometerOra} km-rel.");
         }
 
-        public void Szervizel(int dij)
+        public virtual void Szervizel(int dij)
         {
             if (dij > 100000)
             {
