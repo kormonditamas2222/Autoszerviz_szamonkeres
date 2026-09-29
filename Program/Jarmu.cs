@@ -46,9 +46,10 @@ namespace Program
             if (dij > 100000)
             {
                 kilometerOra -= 10000;
-                uzemanyagSzint -= 10;
-                Console.WriteLine($"{rendszam} jármű szervizelése megtörtént.");
+                
             }
+            uzemanyagSzint -= 10;
+            Console.WriteLine($"{rendszam} jármű szervizelése megtörtént.");
         }
     }
 }
