@@ -199,5 +199,32 @@ namespace Tesztek
             Assert.That(auto.KilometerOra, Is.EqualTo(190000));
             Assert.That(auto.AkkumulatorSzint, Is.EqualTo(70));
         }
+
+        // Új osztály kamion teszt
+
+        [Test]
+        public void Kamion_Szervizel_HosszabbMint7NemSzerviz()
+        {
+            Kamion kamion = new Kamion("KAM-123", 6, 150000, 50, 8);
+            kamion.Szervizel(130000);
+            Assert.That(kamion.KilometerOra, Is.EqualTo(150000));
+            Assert.That(kamion.UzemanyagSzint, Is.EqualTo(50));
+        }
+
+        [Test]
+        public void Kamion_Szervizel_RovidebbMintSzerviz()
+        {
+            Kamion kamion = new Kamion("KAM-690", 9, 110000, 50, 5);
+            kamion.Szervizel(200000);
+            Assert.That(kamion.KilometerOra, Is.EqualTo(100000));
+            Assert.That(kamion.UzemanyagSzint, Is.EqualTo(40));
+        }
+
+        [Test]
+        public void Kamion_Hossz_MinimumErtek() 
+        {
+            Kamion kamion = new Kamion("KAM-473", 3, 10323, 24, 2);
+            Assert.That(kamion.Hossz, Is.EqualTo(4));
+        }
     }
 }

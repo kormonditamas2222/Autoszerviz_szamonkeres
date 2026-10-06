@@ -29,6 +29,10 @@ namespace Program
                 {
                     teherauto.InformaciotAd();
                 }
+                else if (jarmu is Kamion kamion)
+                {
+                    kamion.InformaciotAd();
+                }
                 else
                 {
                     jarmu.InformaciotAd();
@@ -48,6 +52,10 @@ namespace Program
                     else if (jarmu is TeherAuto teherauto)
                     {
                         teherauto.Szervizel(dij);
+                    }
+                    else if (jarmu is Kamion kamion)
+                    {
+                        kamion.Szervizel(dij);
                     }
                     else
                     {
